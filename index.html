@@ -22,6 +22,19 @@
           <tbody></tbody>
         </table>
       </div>
+      <dialog>
+        <form id="new-book-form">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required />
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year" required />
+          <label for="pages">Pages:</label>
+          <input type="number" id="pages" name="pages" required />
+          <button type="submit" class="btn-new-book">Add Book</button>
+        </form>
+      </dialog>
     </main>
     <footer></footer>
     <script src="./js/main.js" type="module"></script>

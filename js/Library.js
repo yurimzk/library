@@ -1,4 +1,4 @@
-import Book from '.Book.js';
+import Book from './Book.js';
 
 class Library {
   constructor() {

@@ -1,4 +1,4 @@
-import { myLibrary, displayBooks } from './main.js';
+import { myLibrary, displayBooks, saveLibrary } from './main.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   function toggleModal() {
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pages = event.target.pages.value;
     myLibrary.addBookToLibrary(title, author, year, pages);
     displayBooks();
+    saveLibrary();
     toggleModal();
   });
 });

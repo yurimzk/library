@@ -137,6 +137,10 @@ label {
   background-color: var(--btn-bg-add-book-hover);
 }
 
+td .toggle-read {
+  margin: auto;
+}
+
 .delete-book {
   background-color: var(--btn-bg-cancel-modal);
   color: var(--btn-text-add-book);

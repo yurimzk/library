@@ -118,6 +118,19 @@ label {
   background-color: var(--btn-bg-cancel-modal);
 }
 
+.toggle-read {
+  background-color: var(--btn-bg-add-book);
+  color: var(--btn-text-add-book);
+  width: 2.0rem;
+  height: 2.0rem;
+  border: none;
+  border-radius: 50%;
+  padding: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .delete-book {
   background-color: var(--btn-bg-cancel-modal);
   color: var(--btn-text-add-book);

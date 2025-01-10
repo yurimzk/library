@@ -7,14 +7,14 @@
 :root {
   font-size: 62.5%;
 
-  --bg-white: hsl(0, 0%, 95%);
+  --white: hsl(0, 0%, 95%);
   --border-white: hsl(0, 0%, 87%);
-  --btn-bg-add-book: hsl(148, 71%, 42%);
-  --btn-bg-add-book-hover: hsl(149, 81%, 35%);
-  --btn-text-add-book: hsl(0, 100%, 100%);
-  --modal-bg-closed: hsla(0, 0%, 0%, 0.5);
-  --btn-bg-cancel-modal: hsl(0, 84%, 47%);
-  --btn-not-read: hsl(0, 0%, 70%);
+  --green: hsl(148, 71%, 42%);
+  --darker-green: hsl(149, 81%, 35%);
+  --light-white: hsl(0, 100%, 100%);
+  --black: hsla(0, 0%, 0%, 0.5);
+  --red: hsl(0, 84%, 47%);
+  --gray: hsl(0, 0%, 70%);
 }
 
 body {
@@ -50,7 +50,7 @@ td {
 }
 
 th {
-  background-color: (--bg-white);
+  background-color: (--white);
 }
 
 .btn {
@@ -61,8 +61,8 @@ th {
 }
 
 .btn-modal {
-  background-color: var(--btn-bg-add-book);
-  color: var(--btn-text-add-book);
+  background-color: var(--green);
+  color: var(--light-white);
 }
 
 .btn:hover {
@@ -70,7 +70,7 @@ th {
 }
 
 .btn-modal:hover {
-  background-color: var(--btn-bg-add-book-hover);
+  background-color: var(--darker-green);
 }
 
 .modal {
@@ -80,7 +80,7 @@ th {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--modal-bg-closed);
+  background-color: var(--black);
   z-index: 1000;
   justify-content: center;
   align-items: center;
@@ -91,7 +91,7 @@ th {
 }
 
 #new-book-form {
-  background-color: var(--bg-white);
+  background-color: var(--white);
   padding: 4rem;
   border-radius: .8rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -106,8 +106,8 @@ label {
 }
 
 .btn-submit-book:hover {
-  color: var(--btn-text-add-book);
-  background-color: var(--btn-bg-add-book-hover);
+  color: var(--light-white);
+  background-color: var(--darker-green);
 }
 
 .btn-cancel-modal {
@@ -115,13 +115,13 @@ label {
 }
 
 .btn-cancel-modal:hover {
-  color: var(--btn-text-add-book);
-  background-color: var(--btn-bg-cancel-modal);
+  color: var(--light-white);
+  background-color: var(--red);
 }
 
 .toggle-read {
-  background-color: var(--btn-not-read);
-  color: var(--btn-text-add-book);
+  background-color: var(--gray);
+  color: var(--light-white);
   width: 2.0rem;
   height: 2.0rem;
   border: none;
@@ -134,7 +134,7 @@ label {
 
 .toggle-read:hover {
   cursor: pointer;
-  background-color: var(--btn-bg-add-book-hover);
+  background-color: var(--darker-green);
 }
 
 td .toggle-read {
@@ -142,7 +142,7 @@ td .toggle-read {
 }
 
 .delete-book {
-  background-color: var(--btn-bg-cancel-modal);
+  background-color: var(--red);
   color: var(--btn-text-add-book);
   width: 2.0rem;
   height: 2.0rem;
@@ -164,5 +164,5 @@ td .delete-book {
 }
 
 .toggle-read i {
-  color: var(--bg-white);
+  color: var(--white);
 }

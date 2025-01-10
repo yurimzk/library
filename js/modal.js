@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modal.open) {
       modal.close();
     } else {
+      document.querySelector('#new-book-form').reset();
       modal.showModal();
     }
   }

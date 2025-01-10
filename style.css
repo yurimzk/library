@@ -6,4 +6,60 @@
 
 :root {
   font-size: 62.5%;
+
+  --bg-white: hsl(0, 0%, 95%);
+  --border-white: hsl(0, 0%, 87%);
+  --btn-bg-add-book: hsl(148, 71%, 42%);
+  --btn-bg-add-book-hover: hsl(149, 81%, 35%);
+  --btn-text-add-book: hsl(0, 100%, 100%);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#library-container {
+  width: 100%;
+  max-width: 80.0rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--border-white);
+  padding: 1.0rem;
+  text-align: left;
+
+}
+
+th {
+  background-color: (--bg-white);
+}
+
+.btn-modal {
+  margin-top: 1.6rem;
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: .8rem;
+  background-color: var(--btn-bg-add-book);
+  color: var(--btn-text-add-book);
+}
+
+.btn-modal:hover {
+  cursor: pointer;
+  background-color: var(--btn-bg-add-book-hover);
 }

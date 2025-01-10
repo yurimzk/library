@@ -13,6 +13,7 @@
   --btn-bg-add-book-hover: hsl(149, 81%, 35%);
   --btn-text-add-book: hsl(0, 100%, 100%);
   ---modal-bg-closed: hsla(0, 0%, 0%, 0.5);
+  --btn-bg-cancel-modal: hsl(0, 84%, 47%);
 }
 
 body {
@@ -101,4 +102,18 @@ th {
 label {
   font-weight: 500;
   letter-spacing: .2rem;
+}
+
+.btn-submit-book:hover {
+  color: var(--btn-text-add-book);
+  background-color: var(--btn-bg-add-book-hover);
+}
+
+.btn-cancel-modal {
+  margin-top: 0;
+}
+
+.btn-cancel-modal:hover {
+  color: var(--btn-text-add-book);
+  background-color: var(--btn-bg-cancel-modal);
 }

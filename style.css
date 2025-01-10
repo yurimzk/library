@@ -14,6 +14,7 @@
   --btn-text-add-book: hsl(0, 100%, 100%);
   --modal-bg-closed: hsla(0, 0%, 0%, 0.5);
   --btn-bg-cancel-modal: hsl(0, 84%, 47%);
+  --btn-not-read: hsl(0, 0%, 70%);
 }
 
 body {
@@ -119,7 +120,7 @@ label {
 }
 
 .toggle-read {
-  background-color: var(--btn-bg-add-book);
+  background-color: var(--btn-not-read);
   color: var(--btn-text-add-book);
   width: 2.0rem;
   height: 2.0rem;
@@ -129,6 +130,11 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.toggle-read:hover {
+  cursor: pointer;
+  background-color: var(--btn-bg-add-book-hover);
 }
 
 .delete-book {

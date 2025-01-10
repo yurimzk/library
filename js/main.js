@@ -40,6 +40,18 @@ function displayBooks() {
     pagesCell.textContent = book.pages;
     row.appendChild(pagesCell);
 
+    const readCell = document.createElement('td');
+    const readButton = document.createElement('button');
+    readButton.textContext = book.read ? 'Read' : 'TBR';
+    readButton.classList.add('toggle-read');
+    readButton.addEventListener('click', () => {
+      book.read = !book.read;
+      saveLibrary();
+      displayBooks();
+    });
+    readCell.appendChild(readButton);
+    row.appendChild(readCell);
+
     const removeCell = document.createElement('td');
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'x';

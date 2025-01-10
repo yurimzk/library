@@ -21,7 +21,7 @@ function displayBooks() {
   const tableBody = document.querySelector('#library-table tbody');
   tableBody.innerHTML = '';
 
-  myLibrary.books.forEach((book) => {
+  myLibrary.books.forEach((book, index) => {
     const row = document.createElement('tr');
 
     const titleCell = document.createElement('td');
@@ -39,6 +39,18 @@ function displayBooks() {
     const pagesCell = document.createElement('td');
     pagesCell.textContent = book.pages;
     row.appendChild(pagesCell);
+
+    const removeCell = document.createElement('td');
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'x';
+    deleteButton.classList.add('delete-book');
+    deleteButton.addEventListener('click', () => {
+      myLibrary.books.splice(index, 1);
+      saveLibrary();
+      displayBooks();
+    });
+    removeCell.appendChild(deleteButton);
+    row.appendChild(removeCell);
 
     tableBody.appendChild(row);
   });

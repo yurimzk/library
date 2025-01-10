@@ -2,9 +2,20 @@ import Library from './Library.js';
 import './modal.js';
 
 const myLibrary = new Library();
-myLibrary.addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 1937, 310);
-myLibrary.addBookToLibrary('The Fellowship of the Ring', 'J.R.R. Tolkien', 1954, 423);
-myLibrary.addBookToLibrary('To Kill a Mockinbird', 'Harper Lee', 1960, 281);
+
+function saveLibrary() {
+  localStorage.setItem('library', JSON.stringify(myLibrary.books));
+}
+
+function loadLibrary() {
+  const libraryData = localStorage.getItem('library');
+  if (libraryData) {
+    const books = JSON.parse(libraryData);
+    books.forEach((book) => {
+      myLibrary.addBookToLibrary(book.title, book.author, book.year, book.pages);
+    })
+  }
+}
 
 function displayBooks() {
   const tableBody = document.querySelector('#library-table tbody');
@@ -33,6 +44,9 @@ function displayBooks() {
   });
 }
 
-displayBooks();
+document.addEventListener('DOMContentLoaded', () => {
+  loadLibrary();
+  displayBooks();
+});
 
-export { myLibrary, displayBooks };
+export { myLibrary, displayBooks, saveLibrary };

@@ -12,7 +12,7 @@
   --btn-bg-add-book: hsl(148, 71%, 42%);
   --btn-bg-add-book-hover: hsl(149, 81%, 35%);
   --btn-text-add-book: hsl(0, 100%, 100%);
-  ---modal-bg-closed: hsla(0, 0%, 0%, 0.5);
+  --modal-bg-closed: hsla(0, 0%, 0%, 0.5);
   --btn-bg-cancel-modal: hsl(0, 84%, 47%);
 }
 
@@ -79,7 +79,7 @@ th {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(---modal-bg-closed);
+  background-color: var(--modal-bg-closed);
   z-index: 1000;
   justify-content: center;
   align-items: center;
@@ -116,4 +116,22 @@ label {
 .btn-cancel-modal:hover {
   color: var(--btn-text-add-book);
   background-color: var(--btn-bg-cancel-modal);
+}
+
+.delete-book {
+  background-color: var(--btn-bg-cancel-modal);
+  color: var(--btn-text-add-book);
+  width: 2.0rem;
+  height: 2.0rem;
+  border: none;
+  border-radius: 50%;
+  padding: .8rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-book:hover {
+  cursor: pointer;
 }

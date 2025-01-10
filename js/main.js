@@ -1,4 +1,5 @@
 import Library from './Library.js';
+import './modal.js';
 
 const myLibrary = new Library();
 myLibrary.addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 1937, 310);
@@ -33,3 +34,5 @@ function displayBooks() {
 }
 
 displayBooks();
+
+export { myLibrary, displayBooks };

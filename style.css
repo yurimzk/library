@@ -162,3 +162,7 @@ td .toggle-read {
 td .delete-book {
   margin: auto;
 }
+
+.toggle-read i {
+  color: var(--bg-white);
+}

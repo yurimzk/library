@@ -135,3 +135,7 @@ label {
 .delete-book:hover {
   cursor: pointer;
 }
+
+td .delete-book {
+  margin: auto;
+}

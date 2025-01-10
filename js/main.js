@@ -49,7 +49,7 @@ function displayBooks() {
     const readBgColor = rootStyles.getPropertyValue('--darker-green').trim();
     const notReadBgColor = rootStyles.getPropertyValue('--gray').trim();
 
-    readButton.style.backgroundColor = book.read ? 'green' : 'read';
+    readButton.style.backgroundColor = book.read ? readBgColor : notReadBgColor;
     readButton.addEventListener('click', () => {
       book.read = !book.read;
       saveLibrary();

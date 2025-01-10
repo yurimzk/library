@@ -22,7 +22,8 @@
           <tbody></tbody>
         </table>
       </div>
-      <dialog>
+      <button class="btn-modal">Add book</button>
+      <dialog class="modal">
         <form id="new-book-form">
           <label for="title">Title:</label>
           <input type="text" id="title" name="title" required />
@@ -32,7 +33,8 @@
           <input type="number" id="year" name="year" required />
           <label for="pages">Pages:</label>
           <input type="number" id="pages" name="pages" required />
-          <button type="submit" class="btn-new-book">Add Book</button>
+          <button type="submit">Submit</button>
+          <button type="button" onclick="toggleModal()">Cancel</button>
         </form>
       </dialog>
     </main>

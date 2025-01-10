@@ -134,7 +134,7 @@ label {
 
 .toggle-read:hover {
   cursor: pointer;
-  background-color: var(--darker-green);
+  background-color: var(--darker-green) !important;
 }
 
 td .toggle-read {

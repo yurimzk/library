@@ -42,8 +42,14 @@ function displayBooks() {
 
     const readCell = document.createElement('td');
     const readButton = document.createElement('button');
-    readButton.textContext = book.read ? 'Read' : 'TBR';
+    readButton.innerHTML = '<i class="fas fa-check"></i>';
     readButton.classList.add('toggle-read');
+
+    const rootStyles = getComputedStyle(document.documentElement);
+    const readBgColor = rootStyles.getPropertyValue('--darker-green').trim();
+    const notReadBgColor = rootStyles.getPropertyValue('--gray').trim();
+
+    readButton.style.backgroundColor = book.read ? 'green' : 'read';
     readButton.addEventListener('click', () => {
       book.read = !book.read;
       saveLibrary();

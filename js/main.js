@@ -45,9 +45,11 @@ function displayBooks() {
     deleteButton.textContent = 'x';
     deleteButton.classList.add('delete-book');
     deleteButton.addEventListener('click', () => {
-      myLibrary.books.splice(index, 1);
-      saveLibrary();
-      displayBooks();
+      if (confirm('Ar you sure you want to delete this book?')) {
+        myLibrary.books.splice(index, 1);
+        saveLibrary();
+        displayBooks();
+      }
     });
     removeCell.appendChild(deleteButton);
     row.appendChild(removeCell);

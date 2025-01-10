@@ -24,4 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     saveLibrary();
     toggleModal();
   });
+
+  document.querySelector('.btn-cancel-modal').addEventListener('click', toggleModal);
 });
